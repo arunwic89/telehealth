@@ -1,7 +1,7 @@
 import { AzureFunction, Context, HttpRequest } from "@azure/functions";
 import { getUserInfo, isAuthenticated} from "@aaronpowell/static-web-apps-api-auth";
 import { CommunicationIdentityClient } from "@azure/communication-identity";
-import { CommunicationUserIdentifier, AzureCommunicationTokenCredential } from '@azure/communication-common'
+//import { CommunicationUserIdentifier, AzureCommunicationTokenCredential } from '@azure/communication-common'
 
 // TODO: 
 // To make this sample work, you need to create an Azure Communication Services in the Azure Portal
