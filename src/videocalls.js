@@ -200,7 +200,7 @@ async function initializeCallAgent() {
         const callClient = new CallClient(); 
         tokenCredential = new AzureCommunicationTokenCredential(ACSUser.userToken);
 
-        callAgent = await callClient.createCallAgent(tokenCredential, {displayName: 'ACS:' + authUserEmail})
+        callAgent = await callClient.createCallAgent(tokenCredential, {displayName: 'WIC:' + authUserEmail})
         // Set up a camera device to use.
         deviceManager = await callClient.getDeviceManager();
         await deviceManager.askDevicePermission({ video: true });
