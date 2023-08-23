@@ -1,5 +1,5 @@
 import { AzureFunction, Context, HttpRequest } from "@azure/functions";
-import { getUserInfo, isAuthenticated} from "@aaronpowell/static-web-apps-api-auth";
+//import { getUserInfo, isAuthenticated} from "@aaronpowell/static-web-apps-api-auth";
 import { CommunicationIdentityClient } from "@azure/communication-identity";
 //import { CommunicationUserIdentifier, AzureCommunicationTokenCredential } from '@azure/communication-common'
 
@@ -42,7 +42,7 @@ const httpTrigger: AzureFunction = async function (context: Context, req: HttpRe
     // Otherwise, we try to create a new ACS User ID or refresh its access token
     else {
         // Only authenticated users can call this API
-        if (!isAuthenticated(req) && process.env["ACS_ConnectionString"]) {
+        if (!process.env["ACS_ConnectionString"]) {
             context.res = {
                 body: "Please login first."
             };
