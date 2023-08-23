@@ -104,7 +104,7 @@ async function getUserAcsId(userEmail) {
         else {
             authUserEmail=authenticatedUser.userDetails + "@" + authenticatedUser.identityProvider;
         }
-        var ACSUserQuery = await fetch(`/api/users/`+ authUserEmail);
+        var ACSUserQuery = await fetch('/api/users/'+ authUserEmail);
         try {
             ACSUser = await ACSUserQuery.json();
         }
